@@ -28,8 +28,8 @@
 
 .vis-item.vis-box {
   text-align: center;
-  border-style: solid;
-  border-radius: 2px;
+  border-style: none;
+  border-radius: 0px;
 }
 
 .vis-item.vis-point {
@@ -39,14 +39,16 @@
 .vis-item.vis-dot {
   position: absolute;
   padding: 0;
-  border-width: 4px;
+  border-width: 3px;
   border-style: solid;
-  border-radius: 4px;
+  border-radius: 3px;
+  top:16px !important;
 }
 
-.vis-item.vis-range {
+.vis-item .vis-range {
   border-style: solid;
-  border-radius: 2px;
+  border-width: 2px;
+  border-color: #efefef;
   box-sizing: border-box;
 }
 
@@ -71,7 +73,7 @@
   white-space: nowrap;
 }
 
-.vis-item.vis-range .vis-item-content {
+.vis-item .vis-range .vis-item-content {
   position: relative;
   display: inline-block;
 }
@@ -79,6 +81,15 @@
 .vis-item.vis-background .vis-item-content {
   position: absolute;
   display: inline-block;
+}
+
+.vis-panel.vis-left-move, .vis-panel.vis-right-move{
+	background-color:#ebeff0;
+	border: 1px solid #dfe3e6;
+	color: #7d7c83;
+	z-index: 999;
+	text-align: center;
+	cursor: pointer;
 }
 
 .vis-item.vis-line {
@@ -92,7 +103,22 @@
 .vis-item .vis-item-content {
   white-space: nowrap;
   box-sizing: border-box;
-  padding: 5px;
+  /*padding: 5px;*/
+  font-size:12px;
+  margin-left:0 !important;
+}
+.vis-box{
+	border: none;
+	background: none;
+	text-transform: capitalize;
+}
+.vis-box a{
+	color: #42b3e7;
+	font-weight: bold;
+	cursor: pointer;
+}
+.vis-box .vis-item-content{
+	text-decoration: underline;
 }
 
 .vis-item .vis-onUpdateTime-tooltip {
@@ -165,7 +191,7 @@
   cursor: move;
 }
 
-.vis-item.vis-range .vis-drag-left {
+.vis-item .vis-range .vis-drag-left {
   position: absolute;
   width: 24px;
   max-width: 20%;
@@ -177,7 +203,7 @@
   cursor: w-resize;
 }
 
-.vis-item.vis-range .vis-drag-right {
+.vis-item .vis-range .vis-drag-right {
   position: absolute;
   width: 24px;
   max-width: 20%;
@@ -192,4 +218,14 @@
 .vis-range.vis-item.vis-readonly .vis-drag-left,
 .vis-range.vis-item.vis-readonly .vis-drag-right {
   cursor: auto;
+}
+.no-background {
+	background:none;
+	border:none;
+}
+
+.vis-item.vis-point.event-gray, .vis-item.vis-range.event-gray{
+	border-top: 5px solid lightgray;
+	top:0 !important;
+	padding-top: 10px;
 }

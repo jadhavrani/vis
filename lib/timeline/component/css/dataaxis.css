@@ -75,6 +75,20 @@
   transform: rotate(-90deg);
 }
 
+.vis-data-axis .vis-y-axis.vis-title.vis-right-menu {
+  bottom: 0;
+  -webkit-transform-origin: left top;
+  -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  -o-transform-origin: left top;
+  transform-origin: left bottom;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
 .vis-data-axis .vis-y-axis.vis-title.vis-right {
   bottom: 0;
   -webkit-transform-origin: right bottom;

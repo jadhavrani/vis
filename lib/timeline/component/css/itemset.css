@@ -61,3 +61,93 @@
   height: 100%;
   z-index: 10;
 }
+
+/* need to change*/
+
+.vis-move-Left{
+	border:none;
+}
+.vis-vital-chart{
+	border-left: 20px solid #42b3e7;
+}
+.vis-vital-chart:before{
+	content: "\f047";
+    font-family: FontAwesome;
+    left:-17px;
+	color:white;
+	padding-top: 30px;
+    position:absolute;
+    top:0;
+	text-align:center;
+}
+.vis-medication-chart{
+	border-left: 20px solid #7682ca;
+}
+.vis-medication-chart:before{
+	content: "\f047";
+    font-family: FontAwesome;
+    left:-17px;
+	color:white;
+	padding-top: 30px;
+    position:absolute;
+    top:0;
+	text-align:center;
+}
+.vis-labs-chart{
+	border-left: 20px solid #45b0a6;
+}
+.vis-labs-chart:before{
+	content: "\f047";
+    font-family: FontAwesome;
+    left:-17px;
+	color:white;
+	padding-top: 30px;
+    position:absolute;
+    top:0;
+	text-align:center;
+}
+.vis-event-chart{
+	border-left: 20px solid #b0b5b8;
+}
+.vis-event-chart:before{
+	content: "\f047";
+    font-family: FontAwesome;
+    left:-17px;
+	color:white;
+	padding-top: 30px;
+    position:absolute;
+    top:0;
+	text-align:center;
+}
+.grid, .graph{
+	margin-right:10px;
+}
+.grid.selected, .graph.selected{
+	color: #42b3e7;
+}
+.red{
+	background-color:red;
+	border-color:red !important;;
+}
+.orange{
+	background-color:orange;
+	border-color:orange !important;;
+}
+.yellow{
+	background-color:yellow;
+	border-color:yellow !important;;
+}
+.green{
+	background-color:#6ed053;
+	border-color:#6ed053 !important;
+}
+.skyblue{
+	border-color: #42b3e7 !important;
+}
+
+.purple{
+	border-color: #7682ca !important;
+}
+.seablue{
+	border-color: #45b0a6 !important;
+}

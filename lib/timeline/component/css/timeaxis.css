@@ -53,3 +53,11 @@
 .vis-time-axis .vis-grid.vis-major {
   border-color: #bfbfbf;
 }
+
+.vis-time-axis .vis-grid{
+	border:none;
+}
+
+.vis-foreground .vis-group:first-child{
+	height:4.5px !important;
+}

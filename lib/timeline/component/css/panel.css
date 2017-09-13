@@ -9,6 +9,7 @@
 
 .vis-panel.vis-center,
 .vis-panel.vis-left,
+.vis-panel.vis-right-menu,
 .vis-panel.vis-right,
 .vis-panel.vis-top,
 .vis-panel.vis-bottom {
@@ -17,8 +18,9 @@
 
 .vis-panel.vis-center,
 .vis-panel.vis-left,
+.vis-panel.vis-right-menu,
 .vis-panel.vis-right {
-  border-top-style: solid;
+  border-top-style: none;
   border-bottom-style: solid;
   overflow: hidden;
 }
@@ -48,8 +50,8 @@
 .vis-panel.vis-center,
 .vis-panel.vis-top,
 .vis-panel.vis-bottom {
-  border-left-style: solid;
-  border-right-style: solid;
+  border-left-style: none;
+  border-right-style: none;
 }
 
 .vis-background {

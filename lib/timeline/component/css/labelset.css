@@ -17,23 +17,49 @@
   box-sizing: border-box;
 }
 
-.vis-labelset .vis-label {
+.vis-menuset  {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.vis-labelset .vis-label, .vis-menuset .vis-menu {
   border-bottom: 1px solid #bfbfbf;
+  height:72px;
+}
+
+.vis-labelset .vis-label:first-child, .vis-menuset .vis-menu:first-child {
+  border-bottom: 1px solid #bfbfbf;
+  height:30px;
 }
 
 .vis-labelset .vis-label.draggable {
   cursor: pointer;
 }
 
-.vis-labelset .vis-label:last-child {
+.vis-labelset .vis-label:last-child, .vis-menuset .vis-menu:last-child {
   border-bottom: none;
 }
 
-.vis-labelset .vis-label .vis-inner {
+.vis-labelset .vis-label .vis-inner , .vis-menuset .vis-menu .vis-inner{
   display: inline-block;
   padding: 5px;
 }
 
 .vis-labelset .vis-label .vis-inner.vis-hidden {
   padding: 0;
+}
+
+.vis-labelset .vis-label:first-child{
+	height:4.5px !important;
+}
+
+.vis-menuset .vis-menu:first-child{
+	height:4.5px !important;
+	padding: 0;
+}
+
+.vis-menu{
+	padding: 25px 0;
+	text-align:center;
 }
