@@ -20256,6 +20256,7 @@ return /******/ (function(modules) { // webpackBootstrap
   Core.prototype._setDOM = function () {
     var props = this.props;
     var dom = this.dom;
+	var timeline = this;
 
     props.leftContainer.width = props.left.width;
     props.rightMenuContainer.width = props.left.width;
@@ -23824,12 +23825,11 @@ return /******/ (function(modules) { // webpackBootstrap
     menu.style.color = 'lightgray';
     menu.style.fontSize = '14px';
     var group = this;
-
     grid = document.createElement('span');
     grid.className = 'grid selected fa fa-table';
     graph = document.createElement('span');
     graph.className = 'graph selected fa fa-line-chart';
-
+	var items;
     grid.addEventListener('click', function () {
       items = $.map(group.items, function (item, index) {
         return [item];
@@ -23849,6 +23849,7 @@ return /******/ (function(modules) { // webpackBootstrap
         var item = items[i];
         if (item.dom.dot.hidden) util.addClassName(graph, 'selected');else util.removeClassName(graph, 'selected');
         item.dom.dot.hidden = !item.dom.dot.hidden;
+		item.repositionY();
       }
     });
 
@@ -25706,6 +25707,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
       // contents box (inside the background box). used for making margins
       dom.content = document.createElement('a');
+	  dom.content.href = '';
       dom.content.className = 'vis-item-content';
       dom.box.appendChild(dom.content);
 
@@ -26129,8 +26131,13 @@ return /******/ (function(modules) { // webpackBootstrap
     var orientation = this.options.orientation.item;
     var point = this.dom.point;
     if (orientation == 'top') {
-      // point.style.top = this.top + 'px';
-      point.style.top = Math.min(15 * this.content * -1 / 10 + 100, 45) + 'px';
+	  if(this.dom.dot.hidden){
+        point.style.top = '25px';
+	  }
+	  else {
+		point.style.top = Math.min(15 * this.content * -1 / 10 + 100, 45) + 'px';
+	  }
+       
     } else {
       point.style.top = this.parent.height - this.top - this.height + 'px';
     }
