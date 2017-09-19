@@ -1407,8 +1407,8 @@ div.vis-network div.vis-navigation div.vis-button.vis-zoomExtends {
 .vis-panel.vis-center,
 .vis-panel.vis-top,
 .vis-panel.vis-bottom {
-  border-left-style: none;
-  border-right-style: none;
+  border-left-style: solid;
+  border-right-style: solid;
 }
 
 .vis-background {
@@ -1570,7 +1570,7 @@ div.vis-network div.vis-navigation div.vis-button.vis-zoomExtends {
   padding: 3px;
   overflow: hidden;
   box-sizing: border-box;
-
+  text-align: center;
   white-space: nowrap;
 }
 
@@ -1618,4 +1618,10 @@ div.vis-network div.vis-navigation div.vis-button.vis-zoomExtends {
   margin: 0;
 
   box-sizing: border-box;
+}
+.view-all{
+	text-decoration: underline !important;
+    color: #42b3e7 !important;
+    font-weight: bold;
+    cursor: pointer;
 }

@@ -17532,8 +17532,8 @@ return /******/ (function(modules) { // webpackBootstrap
     } else {
       // exactly fit the items (plus a small margin)
       range = this.getItemRange();
-      //this.range.setRange(range.min, range.max, { animation: animation });
-      this.range.setRange('Fri Jul 20 2017 00:00:00 GMT+0530', 'Fri Jul 28 2017 00:00:00 GMT+0530', { animation: animation });
+      this.range.setRange(range.min, range.max, { animation: animation });
+      //this.range.setRange('Fri Jul 20 2017 00:00:00 GMT+0530', 'Fri Jul 28 2017 00:00:00 GMT+0530', { animation: animation });
     }
   };
 
@@ -19316,17 +19316,17 @@ return /******/ (function(modules) { // webpackBootstrap
 
     this.dom.root = document.createElement('div');
     this.dom.background = document.createElement('div');
-    this.dom.leftMove = document.createElement('div');
-    this.dom.rightMove = document.createElement('div');
+    //his.dom.leftMove = document.createElement('div');
+    //this.dom.rightMove = document.createElement('div');
     this.dom.backgroundVertical = document.createElement('div');
     this.dom.backgroundHorizontal = document.createElement('div');
     this.dom.centerContainer = document.createElement('div');
     this.dom.leftContainer = document.createElement('div');
-    this.dom.rightMenuContainer = document.createElement('div');
+    //this.dom.rightMenuContainer = document.createElement('div');
     this.dom.rightContainer = document.createElement('div');
     this.dom.center = document.createElement('div');
     this.dom.left = document.createElement('div');
-    this.dom.rightMenu = document.createElement('div');
+    //this.dom.rightMenu = document.createElement('div');
     this.dom.right = document.createElement('div');
     this.dom.top = document.createElement('div');
     this.dom.bottom = document.createElement('div');
@@ -19340,20 +19340,20 @@ return /******/ (function(modules) { // webpackBootstrap
 
     this.dom.root.className = 'vis-timeline';
     this.dom.background.className = 'vis-panel vis-background';
-    this.dom.leftMove.className = 'vis-panel vis-background vis-left-move fa fa-angle-left fa-2x';
-    this.dom.leftMove.id = 'moveLeft';
-    this.dom.rightMove.className = 'vis-panel vis-background vis-right-move fa fa-angle-right fa-2x';
-    this.dom.rightMove.id = 'moveRight';
+    //this.dom.leftMove.className = 'vis-panel vis-background vis-left-move fa fa-angle-left fa-2x';
+    //this.dom.leftMove.id = 'moveLeft';
+    //this.dom.rightMove.className = 'vis-panel vis-background vis-right-move fa fa-angle-right fa-2x';
+    //this.dom.rightMove.id = 'moveRight';
     this.dom.backgroundVertical.className = 'vis-panel vis-background vis-vertical';
     this.dom.backgroundHorizontal.className = 'vis-panel vis-background vis-horizontal';
     this.dom.centerContainer.className = 'vis-panel vis-center';
     this.dom.leftContainer.className = 'vis-panel vis-left';
-    this.dom.rightMenuContainer.className = 'vis-panel vis-right-menu';
+    //this.dom.rightMenuContainer.className = 'vis-panel vis-right-menu';
     this.dom.rightContainer.className = 'vis-panel vis-right';
     this.dom.top.className = 'vis-panel vis-top';
     this.dom.bottom.className = 'vis-panel vis-bottom';
     this.dom.left.className = 'vis-content';
-    this.dom.rightMenu.className = 'vis-content';
+    //this.dom.rightMenu.className = 'vis-content';
     this.dom.center.className = 'vis-content';
     this.dom.right.className = 'vis-content';
     this.dom.shadowTop.className = 'vis-shadow vis-top';
@@ -19365,13 +19365,13 @@ return /******/ (function(modules) { // webpackBootstrap
     this.dom.rollingModeBtn.className = 'vis-rolling-mode-btn';
 
     this.dom.root.appendChild(this.dom.background);
-    this.dom.root.appendChild(this.dom.leftMove);
-    this.dom.root.appendChild(this.dom.rightMove);
+    //this.dom.root.appendChild(this.dom.leftMove);
+    //this.dom.root.appendChild(this.dom.rightMove);
     this.dom.root.appendChild(this.dom.backgroundVertical);
     this.dom.root.appendChild(this.dom.backgroundHorizontal);
     this.dom.root.appendChild(this.dom.centerContainer);
     this.dom.root.appendChild(this.dom.leftContainer);
-    this.dom.root.appendChild(this.dom.rightMenuContainer);
+    //this.dom.root.appendChild(this.dom.rightMenuContainer);
     this.dom.root.appendChild(this.dom.rightContainer);
     this.dom.root.appendChild(this.dom.top);
     this.dom.root.appendChild(this.dom.bottom);
@@ -19380,14 +19380,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
     this.dom.centerContainer.appendChild(this.dom.center);
     this.dom.leftContainer.appendChild(this.dom.left);
-    this.dom.rightMenuContainer.appendChild(this.dom.rightMenu);
+    //this.dom.rightMenuContainer.appendChild(this.dom.rightMenu);
     this.dom.rightContainer.appendChild(this.dom.right);
     this.dom.centerContainer.appendChild(this.dom.shadowTop);
     this.dom.centerContainer.appendChild(this.dom.shadowBottom);
     this.dom.leftContainer.appendChild(this.dom.shadowTopLeft);
     this.dom.leftContainer.appendChild(this.dom.shadowBottomLeft);
-    this.dom.rightMenuContainer.appendChild(this.dom.shadowTopLeft);
-    this.dom.rightMenuContainer.appendChild(this.dom.shadowBottomLeft);
+    //this.dom.rightMenuContainer.appendChild(this.dom.shadowTopLeft);
+    //this.dom.rightMenuContainer.appendChild(this.dom.shadowBottomLeft);
     this.dom.rightContainer.appendChild(this.dom.shadowTopRight);
     this.dom.rightContainer.appendChild(this.dom.shadowBottomRight);
 
@@ -20157,7 +20157,7 @@ return /******/ (function(modules) { // webpackBootstrap
     var containerHeight = props.root.height - props.top.height - props.bottom.height - props.borderRootHeight;
     props.centerContainer.height = containerHeight;
     props.leftContainer.height = containerHeight;
-    props.rightMenuContainer.height = props.leftContainer.height;
+    //props.rightMenuContainer.height = props.leftContainer.height;
     props.rightContainer.height = props.leftContainer.height;
 
     // calculate the widths of the panels
@@ -20259,11 +20259,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	var timeline = this;
 
     props.leftContainer.width = props.left.width;
-    props.rightMenuContainer.width = props.left.width;
+    //props.rightMenuContainer.width = props.left.width;
     props.rightContainer.width = props.right.width;
     props.move.width = 30;
-    //var centerWidth = props.root.width - props.left.width - props.right.width - props.borderRootWidth;
-    var centerWidth = props.root.width - props.left.width - props.right.width - props.borderRootWidth - props.move.width * 2 - props.rightMenuContainer.width;
+    var centerWidth = props.root.width - props.left.width - props.right.width - props.borderRootWidth;
+    //var centerWidth = props.root.width - props.left.width - props.right.width - props.borderRootWidth - props.move.width * 2 - props.rightMenuContainer.width;
     props.center.width = centerWidth;
     props.centerContainer.width = centerWidth;
     props.top.width = centerWidth;
@@ -20271,36 +20271,39 @@ return /******/ (function(modules) { // webpackBootstrap
 
     // resize the panels
     dom.background.style.height = props.background.height + 'px';
-    dom.leftMove.style.height = props.background.height + 'px';
-    dom.rightMove.style.height = props.background.height + 'px';
+    //dom.leftMove.style.height = props.background.height + 'px';
+    //dom.rightMove.style.height = props.background.height + 'px';
     dom.backgroundVertical.style.height = props.background.height + 'px';
     dom.backgroundHorizontal.style.height = props.centerContainer.height + 'px';
     dom.centerContainer.style.height = props.centerContainer.height + 'px';
     dom.leftContainer.style.height = props.leftContainer.height + 'px';
-    dom.rightMenuContainer.style.height = props.rightMenuContainer.height + 'px';
+    //dom.rightMenuContainer.style.height = props.rightMenuContainer.height + 'px';
     dom.rightContainer.style.height = props.rightContainer.height + 'px';
 
     dom.background.style.width = props.background.width + 'px';
-    dom.leftMove.style.width = props.move.width + 'px';
-    dom.rightMove.style.width = props.move.width + 'px';
+    //dom.leftMove.style.width = props.move.width + 'px';
+    //dom.rightMove.style.width = props.move.width + 'px';
     dom.backgroundVertical.style.width = props.centerContainer.width + 'px';
-    dom.backgroundHorizontal.style.width = props.background.width - props.rightMenuContainer.width + 'px';
-    dom.rightMenuContainer.style.width = props.rightMenuContainer.width + 'px';
+	dom.backgroundHorizontal.style.width = props.background.width + 'px';
+    //dom.backgroundHorizontal.style.width = props.background.width - props.rightMenuContainer.width + 'px';
+    //dom.rightMenuContainer.style.width = props.rightMenuContainer.width + 'px';
     dom.centerContainer.style.width = props.center.width + 'px';
     dom.top.style.width = props.top.width + 'px';
     dom.bottom.style.width = props.bottom.width + 'px';
 
-    dom.leftMove.style.paddingTop = props.background.height / 2 - 15 + 'px';
-    dom.rightMove.style.paddingTop = props.background.height / 2 - 15 + 'px';
+    //dom.leftMove.style.paddingTop = props.background.height / 2 - 15 + 'px';
+    //dom.rightMove.style.paddingTop = props.background.height / 2 - 15 + 'px';
     // reposition the panels
     dom.background.style.left = '0';
     dom.background.style.top = '0';
-    dom.leftMove.style.left = props.left.width + props.border.left + 'px';
-    dom.leftMove.style.top = '0';
-    dom.rightMove.style.right = props.rightMenuContainer.width + 'px';
-    dom.rightMove.style.top = '0';
-    dom.backgroundVertical.style.left = props.left.width + props.border.left + props.move.width + props.border.left + 'px';
-    dom.backgroundVertical.style.right = props.rightMenuContainer.width + props.move.width + 'px';
+    //dom.leftMove.style.left = props.left.width + props.border.left + 'px';
+    //dom.leftMove.style.top = '0';
+    //dom.rightMove.style.right = props.rightMenuContainer.width + 'px';
+    //dom.rightMove.style.top = '0';
+	dom.backgroundVertical.style.left = props.left.width + props.border.left + props.border.left + 'px';
+    //dom.backgroundVertical.style.right = props.rightMenuContainer.width + 'px';
+    //dom.backgroundVertical.style.left = props.left.width + props.border.left + props.move.width + props.border.left + 'px';
+    //dom.backgroundVertical.style.right = props.rightMenuContainer.width + props.move.width + 'px';
     dom.backgroundVertical.style.top = '0';
 
     dom.backgroundHorizontal.style.left = '0';
@@ -20309,8 +20312,8 @@ return /******/ (function(modules) { // webpackBootstrap
     dom.centerContainer.style.top = props.top.height + 'px';
     dom.leftContainer.style.left = '0';
     dom.leftContainer.style.top = props.top.height + 'px';
-    dom.rightMenuContainer.style.right = '0';
-    dom.rightMenuContainer.style.top = props.top.height + 'px';
+    //dom.rightMenuContainer.style.right = '0';
+    //dom.rightMenuContainer.style.top = props.top.height + 'px';
     dom.rightContainer.style.left = props.left.width + props.center.width + 'px';
     dom.rightContainer.style.top = props.top.height + 'px';
     dom.top.style.left = dom.backgroundVertical.style.left;
@@ -20324,7 +20327,7 @@ return /******/ (function(modules) { // webpackBootstrap
     dom.left.style.left = '0';
     dom.right.style.left = '0';
 
-    dom.move = function (percentage) {
+    /*dom.move = function (percentage) {
       var range = timeline.getWindow();
       var interval = range.end - range.start;
 
@@ -20338,7 +20341,7 @@ return /******/ (function(modules) { // webpackBootstrap
     });
     dom.leftMove.addEventListener('click', function () {
       dom.move(0.2);
-    });
+    });*/
   };
 
   // TODO: deprecated since version 1.1.0, remove some day
@@ -20852,7 +20855,7 @@ return /******/ (function(modules) { // webpackBootstrap
     //       of the center container is larger than of the ItemSet, so we
     //       can click in the empty area to create a new item or deselect an item.
     this.hammer = new Hammer(this.body.dom.centerContainer);
-    this.hammer = new Hammer(this.body.dom.rightMenuContainer);
+    //this.hammer = new Hammer(this.body.dom.rightMenuContainer);
 
     // drag items when selected
     this.hammer.on('hammer.input', function (event) {
@@ -21121,7 +21124,7 @@ return /******/ (function(modules) { // webpackBootstrap
         this.body.dom.right.appendChild(this.dom.labelSet);
       } else {
         this.body.dom.left.appendChild(this.dom.labelSet);
-        this.body.dom.rightMenu.appendChild(this.dom.menuSet);
+        //this.body.dom.rightMenu.appendChild(this.dom.menuSet);
       }
     }
   };
@@ -22884,7 +22887,34 @@ return /******/ (function(modules) { // webpackBootstrap
 
     return clone;
   };
+  
+  ItemSet.prototype.setTabularView = function() {
+	var itemArray = $.map(this.items, function(value, index) {
+		return [value];
+	});
+	itemArray.forEach((item) => {
+		if (item instanceof PointItem && item.dom !== null) {
+			item.dom.dot.hidden = true;
+			item.repositionY();
+		} else if (item instanceof RangeItem && item.dom !== null && item.parent.groupDataType !== 'axis') {
+			item.dom.rangebox.hidden = true;
+		}
+	});
+  }
 
+  ItemSet.prototype.setGraphView = function() {
+	var itemArray = $.map(this.items, function(value, index) {
+		return [value];
+	});
+	itemArray.forEach((item) => {
+		if (item instanceof PointItem && item.dom !== null) {
+			item.dom.dot.hidden = false;
+			item.repositionY();
+		} else if (item instanceof RangeItem && item.dom !== null && item.parent.groupDataType !== 'axis') {
+			item.dom.rangebox.hidden = false;
+		}
+	});
+  }
   module.exports = ItemSet;
 
 /***/ }),
@@ -23777,11 +23807,21 @@ return /******/ (function(modules) { // webpackBootstrap
     }
     this.dom.menu = menu;
 
+	var selectedChart = this;
     var inner = document.createElement('div');
     inner.className = 'vis-inner';
     label.appendChild(inner);
     this.dom.inner = inner;
-
+	if(this.groupDataType !== 'axis') {
+		var viewAll = document.createElement('a');
+		viewAll.className = 'view-all';
+		viewAll.innerHTML = 'View All';
+		viewAll.style.display = 'block';
+		viewAll.addEventListener('click', function(){
+			window['angularComponentRef'].zone.run(() => {window['angularComponentRef'].component.test(selectedChart.groupId);})
+		});
+		this.dom.inner.appendChild(viewAll);
+	}
     var foreground = document.createElement('div');
     foreground.className = 'vis-group';
     foreground['timeline-group'] = this;
@@ -23865,7 +23905,9 @@ return /******/ (function(modules) { // webpackBootstrap
     } else if (content instanceof Object) {
       templateFunction(data, this.dom.inner);
     } else if (content !== undefined && content !== null) {
-      this.dom.inner.innerHTML = content;
+      var text = document.createTextNode(content);
+	  //this.dom.inner.appendChild(text);
+	  this.dom.inner.insertBefore(text, this.dom.inner.firstChild);
     } else {
       this.dom.inner.innerHTML = this.groupId || ''; // groupId can be null
     }
@@ -24922,7 +24964,7 @@ return /******/ (function(modules) { // webpackBootstrap
     }
 
     if (this.options.rtl) {
-      this.dom.box.style.right = this.right - 20 + 'px';
+      this.dom.box.style.right = this.right - 21 + 'px';
     } else {
       this.dom.box.style.left = this.left - 20 + 'px';
     }
@@ -26111,7 +26153,7 @@ return /******/ (function(modules) { // webpackBootstrap
     var start = this.conversion.toScreen(this.data.start);
 
     if (this.options.rtl) {
-      this.right = start - this.props.dot.width;
+      this.right = start - this.props.dot.width + 20;
 
       // reposition point
       this.dom.point.style.right = this.right + 'px';
