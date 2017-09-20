@@ -23818,7 +23818,7 @@ return /******/ (function(modules) { // webpackBootstrap
 		viewAll.innerHTML = 'View All';
 		viewAll.style.display = 'block';
 		viewAll.addEventListener('click', function(){
-			window['angularComponentRef'].zone.run(() => {window['angularComponentRef'].component.test(selectedChart.groupId);})
+			window['angularComponentRef'].zone.run(() => {window['angularComponentRef'].component.showDetailedView(selectedChart.groupId);})
 		});
 		this.dom.inner.appendChild(viewAll);
 	}
