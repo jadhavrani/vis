@@ -23811,7 +23811,18 @@ return /******/ (function(modules) { // webpackBootstrap
     var inner = document.createElement('div');
     inner.className = 'vis-inner';
     label.appendChild(inner);
-    this.dom.inner = inner;
+
+	this.dom.inner = inner;
+	var catagory = document.createElement('span');
+	catagory.className = 'catagory';
+	catagory.style.display = 'block';
+	var catagoryUnit = document.createElement('span');
+	catagoryUnit.className = 'catagory-unit';
+	catagoryUnit.style.display = 'block';
+	this.dom.inner.appendChild(catagory);
+	//this.dom.inner.appendChild(catagoryUnit);
+	
+	
 	if(this.groupDataType !== 'axis') {
 		var viewAll = document.createElement('a');
 		viewAll.className = 'view-all';
@@ -23906,8 +23917,10 @@ return /******/ (function(modules) { // webpackBootstrap
       templateFunction(data, this.dom.inner);
     } else if (content !== undefined && content !== null) {
       var text = document.createTextNode(content);
-	  //this.dom.inner.appendChild(text);
-	  this.dom.inner.insertBefore(text, this.dom.inner.firstChild);
+	  var catagory = this.dom.inner.getElementsByClassName('catagory')[0];
+	  catagory.innerHTML = content;
+	  var catagoryUnit = this.dom.inner.getElementsByClassName('catagory-unit')[0];
+	  //catagoryUnit.innerHTML = 'unit';
     } else {
       this.dom.inner.innerHTML = this.groupId || ''; // groupId can be null
     }
