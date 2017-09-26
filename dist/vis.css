@@ -1026,7 +1026,7 @@ div.vis-network div.vis-navigation div.vis-button.vis-zoomExtends {
 	cursor: pointer;
 }
 .vis-box .vis-item-content{
-	text-decoration: underline;
+	/*text-decoration: underline;*/
 }
 
 .vis-item .vis-onUpdateTime-tooltip {

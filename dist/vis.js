@@ -21121,7 +21121,8 @@ return /******/ (function(modules) { // webpackBootstrap
     // show labelset containing labels
     if (!this.dom.labelSet.parentNode) {
       if (this.options.rtl) {
-        this.body.dom.right.appendChild(this.dom.labelSet);
+        //this.body.dom.right.appendChild(this.dom.labelSet);
+		this.body.dom.left.appendChild(this.dom.labelSet);
       } else {
         this.body.dom.left.appendChild(this.dom.labelSet);
         //this.body.dom.rightMenu.appendChild(this.dom.menuSet);
@@ -24977,9 +24978,9 @@ return /******/ (function(modules) { // webpackBootstrap
     }
 
     if (this.options.rtl) {
-      this.dom.box.style.right = this.right - 21 + 'px';
+      this.dom.box.style.right = this.right - 1 + 'px';
     } else {
-      this.dom.box.style.left = this.left - 20 + 'px';
+      this.dom.box.style.left = this.left + 'px';
     }
     this.dom.box.style.width = timeAxisWidth * diffDays + 'px';
 
@@ -25761,8 +25762,8 @@ return /******/ (function(modules) { // webpackBootstrap
       dom.box = document.createElement('DIV');
 
       // contents box (inside the background box). used for making margins
-      dom.content = document.createElement('a');
-	  dom.content.href = '';
+      dom.content = document.createElement('span');
+	  //dom.content.href = '';
       dom.content.className = 'vis-item-content';
       dom.box.appendChild(dom.content);
 
@@ -25923,7 +25924,7 @@ return /******/ (function(modules) { // webpackBootstrap
         this.right = start - this.width / 2;
 
         // reposition box, line, and dot
-        this.dom.box.style.right = this.right + 'px';
+        this.dom.box.style.right = this.right - 20 + 'px';
         this.dom.line.style.right = start - this.props.line.width + 'px';
         this.dom.dot.style.right = start - this.props.dot.width / 2 + 'px';
       } else {
