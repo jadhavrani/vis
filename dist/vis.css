@@ -866,20 +866,6 @@ div.vis-network div.vis-navigation div.vis-button.vis-zoomExtends {
   transform: rotate(-90deg);
 }
 
-.vis-data-axis .vis-y-axis.vis-title.vis-right-menu {
-  bottom: 0;
-  -webkit-transform-origin: left top;
-  -moz-transform-origin: left top;
-  -ms-transform-origin: left top;
-  -o-transform-origin: left top;
-  transform-origin: left bottom;
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-}
-
 .vis-data-axis .vis-y-axis.vis-title.vis-right {
   bottom: 0;
   -webkit-transform-origin: right bottom;
@@ -1207,88 +1193,38 @@ div.vis-network div.vis-navigation div.vis-button.vis-zoomExtends {
 	border:none;
 }
 .vis-vital-chart{
-	border-left: 20px solid #42b3e7;
-}
-.vis-vital-chart:before{
-	content: "\f047";
-    font-family: FontAwesome;
-    left:-17px;
-	color:white;
-	padding-top: 30px;
-    position:absolute;
-    top:0;
-	text-align:center;
+	height: 76px;
+	width: 20px;
+	background-color: #42b3e7;
+	display: inline-block;
+	float: left;
 }
 .vis-medication-chart{
-	border-left: 20px solid #7682ca;
-}
-.vis-medication-chart:before{
-	content: "\f047";
-    font-family: FontAwesome;
-    left:-17px;
-	color:white;
-	padding-top: 30px;
-    position:absolute;
-    top:0;
-	text-align:center;
+	height: 76px;
+	width: 20px;
+	background-color: #7682ca;
+	display: inline-block;
+	float: left;
 }
 .vis-labs-chart{
-	border-left: 20px solid #45b0a6;
-}
-.vis-labs-chart:before{
-	content: "\f047";
-    font-family: FontAwesome;
-    left:-17px;
-	color:white;
-	padding-top: 30px;
-    position:absolute;
-    top:0;
-	text-align:center;
+	height: 76px;
+	width: 20px;
+	background-color: #45b0a6;
+	display: inline-block;
+	float: left;
 }
 .vis-event-chart{
-	border-left: 20px solid #b0b5b8;
-}
-.vis-event-chart:before{
-	content: "\f047";
-    font-family: FontAwesome;
-    left:-17px;
-	color:white;
-	padding-top: 30px;
-    position:absolute;
-    top:0;
-	text-align:center;
+	height: 77px;
+	width: 20px;
+	background-color: lightgray;
+	display: inline-block;
+	float: left;
 }
 .grid, .graph{
 	margin-right:10px;
 }
 .grid.selected, .graph.selected{
 	color: #42b3e7;
-}
-.red{
-	background-color:red;
-	border-color:red !important;;
-}
-.orange{
-	background-color:orange;
-	border-color:orange !important;;
-}
-.yellow{
-	background-color:yellow;
-	border-color:yellow !important;;
-}
-.green{
-	background-color:#6ed053;
-	border-color:#6ed053 !important;
-}
-.skyblue{
-	border-color: #42b3e7 !important;
-}
-
-.purple{
-	border-color: #7682ca !important;
-}
-.seablue{
-	border-color: #45b0a6 !important;
 }
 
 .vis-labelset {
@@ -1309,33 +1245,31 @@ div.vis-network div.vis-navigation div.vis-button.vis-zoomExtends {
   box-sizing: border-box;
 }
 
-.vis-menuset  {
-  position: relative;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-.vis-labelset .vis-label, .vis-menuset .vis-menu {
+.vis-labelset .vis-label{
   border-bottom: 1px solid #bfbfbf;
   height:72px;
 }
 
-.vis-labelset .vis-label:first-child, .vis-menuset .vis-menu:first-child {
+.vis-labelset .vis-label:first-child{
   border-bottom: 1px solid #bfbfbf;
   height:30px;
 }
 
-.vis-labelset .vis-label.draggable {
+.vis-labelset .vis-drag.draggable {
   cursor: pointer;
 }
 
-.vis-labelset .vis-label:last-child, .vis-menuset .vis-menu:last-child {
+.vis-labelset .vis-label:last-child{
   border-bottom: none;
 }
 
-.vis-labelset .vis-label .vis-inner , .vis-menuset .vis-menu .vis-inner{
+.vis-labelset .vis-label .vis-inner {
   display: inline-block;
-  padding: 5px;
+  vertical-align: middle;
+  padding-top: 20px;
+}
+.vis-labelset .vis-label .vis-inner > span, .vis-labelset .vis-label .vis-inner > a {
+  padding-left: 5px;
 }
 
 .vis-labelset .vis-label .vis-inner.vis-hidden {
@@ -1344,16 +1278,6 @@ div.vis-network div.vis-navigation div.vis-button.vis-zoomExtends {
 
 .vis-labelset .vis-label:first-child{
 	height:4.5px !important;
-}
-
-.vis-menuset .vis-menu:first-child{
-	height:4.5px !important;
-	padding: 0;
-}
-
-.vis-menu{
-	padding: 25px 0;
-	text-align:center;
 }
 .vis-panel {
   position: absolute;
@@ -1366,7 +1290,6 @@ div.vis-network div.vis-navigation div.vis-button.vis-zoomExtends {
 
 .vis-panel.vis-center,
 .vis-panel.vis-left,
-.vis-panel.vis-right-menu,
 .vis-panel.vis-right,
 .vis-panel.vis-top,
 .vis-panel.vis-bottom {
@@ -1375,7 +1298,6 @@ div.vis-network div.vis-navigation div.vis-button.vis-zoomExtends {
 
 .vis-panel.vis-center,
 .vis-panel.vis-left,
-.vis-panel.vis-right-menu,
 .vis-panel.vis-right {
   border-top-style: none;
   border-bottom-style: solid;
@@ -1566,7 +1488,7 @@ div.vis-network div.vis-navigation div.vis-button.vis-zoomExtends {
 
 .vis-time-axis .vis-text {
   position: absolute;
-  color: #4d4d4d;
+  color: black;
   padding: 3px;
   overflow: hidden;
   box-sizing: border-box;
@@ -1588,12 +1510,12 @@ div.vis-network div.vis-navigation div.vis-button.vis-zoomExtends {
   border-left: 1px solid;
 }
 
-.vis-time-axis .vis-grid.vis-vertical-rtl {
+.vis-time-axis .vis-grid.vis-vertical-rtl{
   position: absolute;
   border-right: 1px solid;
 }
 
-.vis-time-axis .vis-grid.vis-minor {
+.vis-time-axis .vis-grid.vis-minor{
   border-color: #e5e5e5;
 }
 
@@ -1604,8 +1526,11 @@ div.vis-network div.vis-navigation div.vis-button.vis-zoomExtends {
 .vis-time-axis .vis-grid{
 	border:none;
 }
-
 .vis-foreground .vis-group:first-child{
+	border-top: 1px solid;
+	border-color: #bfbfbf;
+}
+.vis-foreground .vis-group:first-child, .vis-background .vis-group:first-child{
 	height:4.5px !important;
 }
 
@@ -1624,4 +1549,40 @@ div.vis-network div.vis-navigation div.vis-button.vis-zoomExtends {
     color: #42b3e7 !important;
     font-weight: bold;
     cursor: pointer;
+}
+.vis-panel.vis-top{
+	background-color: #ebeff0;
+}
+.vis-time-axis .vis-text.vis-minor{
+	border-left: 1px solid lightgray;
+}
+
+.vis-item.no-background {
+	top: 0!important;
+}
+.vis-timeline, .vis-labelset .vis-label:first-child{
+	background-color: #ebeff0;
+}
+.vis-panel.vis-left,
+.vis-panel.vis-background.vis-vertical-rtl{
+	background-color: white;
+}
+.label-draggable{
+	height: 75px;
+	width: 20px;
+	background-color: lightgray;
+	display: inline;
+	padding-top: 25px;
+}
+.vis-drag{
+	padding-top: 10px;
+}
+.draggable-icon {
+    text-align: center;
+    margin: 4px 0px 0px 4px;
+	color: white;
+	font-size: 3px;	
+}
+.point{
+	height: 10px;
 }

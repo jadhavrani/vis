@@ -22893,6 +22893,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var itemArray = $.map(this.items, function(value, index) {
 		return [value];
 	});
+	console.log(itemArray);
 	itemArray.forEach((item) => {
 		if (item instanceof PointItem && item.dom !== null) {
 			item.dom.dot.hidden = true;
@@ -23779,12 +23780,56 @@ return /******/ (function(modules) { // webpackBootstrap
    */
   Group.prototype._create = function () {
     var label = document.createElement('div');
+	label.className = 'vis-label';
+	var draggable = document.createElement('div');
     if (this.itemSet.options.groupEditable.order) {
-      label.className = 'vis-label draggable';
+      draggable.className = 'vis-drag draggable';
     } else {
-      label.className = 'vis-label';
+      draggable.className = 'vis-drag';
     }
-    this.dom.label = label;
+
+	var row1 = document.createElement('div');
+	var row2 = document.createElement('div');
+	var row3 = document.createElement('div');
+	var row4 = document.createElement('div');
+	
+	row1.className = 'point';
+	row2.className = 'point';
+	row3.className = 'point';
+	row4.className = 'point';
+
+	var move1 = document.createElement('i');
+	move1.className = 'draggable-icon fa fa-circle';
+	var move2 = document.createElement('i');
+	move2.className = 'draggable-icon fa fa-circle';
+	row1.appendChild(move1);
+	row1.appendChild(move2);
+
+	var move3 = document.createElement('i');
+	move3.className = 'draggable-icon fa fa-circle';
+	var move4 = document.createElement('i');
+	move4.className = 'draggable-icon fa fa-circle';
+	row2.appendChild(move3);
+	row2.appendChild(move4);
+	
+	var move5 = document.createElement('i');
+	move5.className = 'draggable-icon fa fa-circle';
+	var move6 = document.createElement('i');
+	move6.className = 'draggable-icon fa fa-circle';
+	row3.appendChild(move5);
+	row3.appendChild(move6);
+	
+	var move7 = document.createElement('i');
+	move7.className = 'draggable-icon fa fa-circle';
+	var move8 = document.createElement('i');
+	move8.className = 'draggable-icon fa fa-circle';
+	row4.appendChild(move7);
+	row4.appendChild(move8);
+
+	draggable.appendChild(row1);
+	draggable.appendChild(row2);
+	draggable.appendChild(row3);
+	draggable.appendChild(row4);
 
     var menu = document.createElement('div');
     if (this.itemSet.options.groupEditable.order) {
@@ -23795,17 +23840,24 @@ return /******/ (function(modules) { // webpackBootstrap
 
     var groupDataType = this.groupDataType;
     if (groupDataType === 'vital') {
-      label.className = label.className + ' vis-vital-chart';
+      draggable.className = draggable.className + ' vis-vital-chart';
+	  label.appendChild(draggable);
     }
     if (groupDataType === 'medication') {
-      label.className = label.className + ' vis-medication-chart';
+      draggable.className = draggable.className + ' vis-medication-chart';
+	  label.appendChild(draggable);
     }
     if (groupDataType === 'labs') {
-      label.className = label.className + ' vis-labs-chart';
+      draggable.className = draggable.className + ' vis-labs-chart';
+	  label.appendChild(draggable);
     }
     if (groupDataType === 'event') {
-      label.className = label.className + ' vis-event-chart';
+      draggable.className = draggable.className + ' vis-event-chart';
+	  label.appendChild(draggable);
     }
+	
+	
+    this.dom.label = label;
     this.dom.menu = menu;
 
 	var selectedChart = this;
@@ -23817,6 +23869,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var catagory = document.createElement('span');
 	catagory.className = 'catagory';
 	catagory.style.display = 'block';
+	catagory.style.fontWeight = 'bold';
 	var catagoryUnit = document.createElement('span');
 	catagoryUnit.className = 'catagory-unit';
 	catagoryUnit.style.display = 'block';
@@ -24098,6 +24151,7 @@ return /******/ (function(modules) { // webpackBootstrap
     // recalculate the height of the group
     var height = this._calculateHeight(margin);
 
+	var height = 75;
     // calculate actual size and position
     var foreground = this.dom.foreground;
     this.top = foreground.offsetTop;
@@ -24112,6 +24166,7 @@ return /******/ (function(modules) { // webpackBootstrap
     this.dom.background.style.height = height + 2 + 'px';
     this.dom.foreground.style.height = height + 2 + 'px';
     this.dom.label.style.height = height + 2 + 'px';
+	this.dom.inner.style.height = height + 2 + 'px';
     this.dom.menu.style.height = height + 2 + 'px';
 
     // update vertical position of items after they are re-stacked and the height of the group is calculated
@@ -25753,6 +25808,7 @@ return /******/ (function(modules) { // webpackBootstrap
    */
   BoxItem.prototype.redraw = function () {
     var dom = this.dom;
+	var axisWidth = $('.vis-text.vis-minor:nth-child(3)').outerWidth();
     if (!dom) {
       // create DOM
       this.dom = {};
@@ -25760,7 +25816,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
       // create main box
       dom.box = document.createElement('DIV');
-
+	  dom.box.style.width = axisWidth + 'px';
+	  dom.box.style.textAlign = 'center';
       // contents box (inside the background box). used for making margins
       dom.content = document.createElement('span');
 	  //dom.content.href = '';
@@ -25921,10 +25978,10 @@ return /******/ (function(modules) { // webpackBootstrap
     } else {
       // default or 'center'
       if (this.options.rtl) {
-        this.right = start - this.width / 2;
+        this.right = start;
 
         // reposition box, line, and dot
-        this.dom.box.style.right = this.right - 20 + 'px';
+        this.dom.box.style.right = this.right + 'px';
         this.dom.line.style.right = start - this.props.line.width + 'px';
         this.dom.dot.style.right = start - this.props.dot.width / 2 + 'px';
       } else {
@@ -26047,6 +26104,7 @@ return /******/ (function(modules) { // webpackBootstrap
    */
   PointItem.prototype.redraw = function () {
     var dom = this.dom;
+	var axisWidth = $('.vis-text.vis-minor:nth-child(3)').outerWidth();
     if (!dom) {
       // create DOM
       this.dom = {};
@@ -26054,6 +26112,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
       // background box
       dom.point = document.createElement('div');
+	  dom.point.style.width = axisWidth + 'px';
+	  dom.point.style.textAlign = 'center';
       // className is updated in redraw()
 
       // contents box, right from the dot
@@ -26063,7 +26123,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
       // dot at start
       dom.dot = document.createElement('div');
-      dom.point.appendChild(dom.dot);
+      //dom.point.appendChild(dom.dot);
 
       // attach this item as attribute
       dom.point['timeline-item'] = this;
@@ -26165,9 +26225,9 @@ return /******/ (function(modules) { // webpackBootstrap
    */
   PointItem.prototype.repositionX = function () {
     var start = this.conversion.toScreen(this.data.start);
-
+	
     if (this.options.rtl) {
-      this.right = start - this.props.dot.width + 20;
+      this.right = start;
 
       // reposition point
       this.dom.point.style.right = this.right + 'px';
@@ -26191,7 +26251,8 @@ return /******/ (function(modules) { // webpackBootstrap
         point.style.top = '25px';
 	  }
 	  else {
-		point.style.top = Math.min(15 * this.content * -1 / 10 + 100, 45) + 'px';
+		point.style.top = '25px';
+		//point.style.top = Math.min(15 * this.content * -1 / 10 + 100, 45) + 'px';
 	  }
        
     } else {
